@@ -1,6 +1,6 @@
 # vk_friends_adder
 
-Скрипт для накрутки друзей "ВКонтакте" by PavKor45
+Скрипт для накрутки друзей "ВКонтакте" by Lordby
 
 Быстрый старт
 1. Устанавливаем [TamperMonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=ru) 
