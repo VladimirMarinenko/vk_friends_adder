@@ -12,23 +12,30 @@
 
 (function () {
     'use strict';
-
+    // ждем загрузки страницы
     $(document).ready(function () {
-        function blink() {
-            var friend = $('.friends_find_user')[0]
-            var name = $(friend).find('.friends_find_user_name').text()
-            var warning = $(document).find(".box_layout")
+        // функция добавления
+        function main_adder() {
 
+            var friend = $('.friends_find_user')[0] // обьект будущего друга
+            var name = $(friend).find('.friends_find_user_name').text() // имя будущего друга
+            var warning = $(document).find(".box_layout") // ошибка или предупреждения со стороны ВК
+
+            // если есть ошибки или предупреждения со стороны ВК, то останавливаем работу
             if (warning.length > 0) {
                 clearInterval(letsgo);
             }
-
+            // если друзей больше нету добавлять, обновляем страницу для появления новых
             if (friend == undefined) {
                 location.reload();
             }
 
-        }
+            // добавляем а затем удаляем обработанную заявку со страницы
+            $(friend).find('.friends_find_user_add').click()
+            $(friend).remove()
 
-        var letsgo = setInterval(blink, 5000);
+        }
+        // выставляем интервал для выполнения нашего алгоритма отправки заявки в данном случае 5 сек
+        var letsgo = setInterval(main_adder, 5000);
     });
 })();
