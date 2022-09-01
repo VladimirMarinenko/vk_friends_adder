@@ -17,9 +17,9 @@
         // функция добавления
         function main_adder() {
 
-            var friend = $('.friends_find_user')[0] // обьект будущего друга
-            var name = $(friend).find('.friends_find_user_name').text() // имя будущего друга
-            var warning = $(document).find(".box_layout") // ошибка или предупреждения со стороны ВК
+            let friend = $('.friends_find_user')[0] // обьект будущего друга
+            let name = $(friend).find('.friends_find_user_name').text() // имя будущего друга
+            let warning = $(document).find(".box_layout") // ошибка или предупреждения со стороны ВК
 
             // если есть ошибки или предупреждения со стороны ВК, то останавливаем работу
             if (warning.length > 0) {
